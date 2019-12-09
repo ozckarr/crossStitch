@@ -49,7 +49,7 @@ function background(){
                 } else {
                     let cellId = i+ ":" +j;
                     td.className = "backgroundHor";
-                    td.setAttribute("onclick", "backgroundVer(event)");
+                    td.setAttribute("onclick", "backgroundHor(event)");
                     td.setAttribute("id", cellId);
                 }
                 tr.appendChild(td);
@@ -86,8 +86,8 @@ function backgroundVer(event){
         document.getElementById(event.target.id).style.backgroundImage = "url('./images/backgroundVerLiBrown.jpg')";
     } else if (document.querySelector('.crossStitchColorPink:checked')) {
         document.getElementById(event.target.id).style.backgroundImage = "url('./images/backgroundVerPink.jpg')";
-    } else if (document.querySelector('.crossStitchColorPink:checked')) {
-        document.getElementById(event.target.id).style.backgroundImage = "url('./images/backgroundVerPink.jpg')";
+    } else if (document.querySelector('.crossStitchColorYellow:checked')) {
+        document.getElementById(event.target.id).style.backgroundImage = "url('./images/backgroundVerYellow.jpg')";
     } else if (document.querySelector('.crossStitchColorGreen:checked')) {
         document.getElementById(event.target.id).style.backgroundImage = "url('./images/backgroundVerGreen.jpg')";
     } else if (document.querySelector('.crossStitchColorLiBlue:checked')) {
@@ -95,8 +95,6 @@ function backgroundVer(event){
     } else if (document.querySelector('.crossStitchColorLiPurple:checked')) {
         document.getElementById(event.target.id).style.backgroundImage = "url('./images/backgroundVerLiPurple.jpg')";
     } else if (document.querySelector('.crossStitchColorReset:checked')) {
-        document.getElementById(event.target.id).style.backgroundImage = "url('./images/backgroundVer.jpeg')";
-    } else {
         document.getElementById(event.target.id).style.backgroundImage = "url('./images/backgroundVer.jpeg')";
     }
 }
@@ -135,8 +133,6 @@ function backgroundHor(event){
     } else if (document.querySelector('.crossStitchColorLiPurple:checked')) {
         document.getElementById(event.target.id).style.backgroundImage = "url('./images/backgroundHorLiPurple.jpg')";
     } else if (document.querySelector('.crossStitchColorReset:checked')) {
-        document.getElementById(event.target.id).style.backgroundImage = "url('./images/backgroundHor.jpeg')";
-    } else {
         document.getElementById(event.target.id).style.backgroundImage = "url('./images/backgroundHor.jpeg')";
     }
 }
