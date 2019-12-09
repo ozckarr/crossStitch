@@ -1,0 +1,118 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+.backgroundVer{
+    background-image: url(./images/backgroundVer.jpeg);
+    width: 1rem;
+    height: 1rem;
+}
+
+
+.backgroundHor{
+    background-image: url(./images/backgroundHor.jpeg);
+    width: 1rem;
+    height: 1rem;
+}
+
+.crossStitchColorPicker{
+    margin: 0.5rem;
+}
+
+.crossStitchColorPicker input{
+    position: relative;
+    top: -0.2rem;
+}
+
+.crossStitchColorPicker input, .crossStitchColorPicker div{
+    display: inline-block;
+}
+
+.colorbox{
+    width: 1rem;
+    height: 1rem;
+}
+
+.crossStitchPanel{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border: darkgrey solid 0.3rem;
+    width: 22rem;
+    padding: 1rem;
+}
+    
+
+.crossStitchColorBoxBlack{
+    background-image: url(./images/backgroundVerBlack.jpg);
+}
+
+.crossStitchColorBoxDaGrey{
+    background-image: url(./images/backgroundVerDaGrey.jpg); 
+}
+
+.crossStitchColorBoxDaBrown{
+    background-image: url(./images/backgroundVarDaBrown.jpg);
+}
+
+.crossStitchColorBoxRed{
+    background-image: url(./images/backgroundVerRed.jpg);
+}
+
+.crossStitchColorBoxOrange{
+    background-image: url(./images/backgroundVerOrange.jpg);
+}
+
+.crossStitchColorBoxDaGreen{
+    background-image: url(./images/backgroundVerDaGreen.jpg);
+}
+
+.crossStitchColorBoxBlue{
+    background-image: url(./images/backgroundVerBlue.jpg);
+}
+
+.crossStitchColorBoxDaPurple{
+    background-image: url(./images/backgroundVarDaPurple.jpg);
+}
+
+.crossStitchColorBoxDaReset{
+    background-image: url(./images/backgroundVer.jpeg);
+}
+
+.crossStitchColorBoxWhite{
+    background-image: url(./images/backgroundVerWhite.jpg);
+}
+
+.crossStitchColorBoxLiGrey{
+    background-image: url(./images/backgroundHorLiGrey.jpg);
+}
+
+.crossStitchColorBoxLiBrown{
+    background-image: url(./images/backgroundHorLiBrown.jpg);
+}
+
+.crossStitchColorBoxPink{
+    background-image: url(./images/backgroundVerPink.jpg);
+}
+
+.crossStitchColorBoxYellow{
+    background-image: url(./images/backgroundVerYellow.jpg);
+}
+
+.crossStitchColorBoxGreen{
+    background-image: url(./images/backgroundVerGreen.jpg);
+}
+
+.crossStitchColorBoxLiBlue{
+    background-image: url(./images/backgroundVerLiBlue.jpg);
+}
+
+.crossStitchColorBoxLiPurple{
+    background-image: url(./images/backgroundVerLiPurple.jpg);
+}
