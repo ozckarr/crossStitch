@@ -141,9 +141,6 @@ body{
   }
 
   @media only screen and (max-width: 45em) {
-    body {
-      background-color: lightblue;
-    }
 
     .crossStitchColorPicker{
         margin: 0.5rem auto;

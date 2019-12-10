@@ -14,6 +14,8 @@ sliderHeightOutput.innerHTML = sliderHeight.value;
 sliderWidthOutput.innerHTML = sliderWidth.value;
 
 
+
+
 sliderHeight.oninput = function() {
     sliderHeightOutput.innerHTML = this.value;
     backgroundHeight = this.value;
@@ -71,20 +73,24 @@ crossStitchPanelToggleButton.addEventListener("click", function() {
 
 function background(){
     let table = document.createElement("table");
+    let backgroundWidthTest = window.innerWidth;
+    backgroundWidthTest = ~~(backgroundWidthTest/16);
+    console.log(backgroundWidthTest);
+
     table.setAttribute("id", "crossStitchTable");
         for (let i = 1; i < backgroundHeight; i++) {
             let tr = document.createElement('tr');
-            for (let j = 1; j < backgroundWidth; j++) {
+            for (let j = 1; j < backgroundWidthTest; j++) {
                 let td = document.createElement('td');
                 if (i%2 == j%2) {
                     let cellId = i+ ":" +j;
                     td.className = "backgroundVer";
-                    td.setAttribute("onclick", "backgroundVer(event)");
+                    td.setAttribute("onmousedown", "backgroundVer(event)");
                     td.setAttribute("id", cellId);
                 } else {
                     let cellId = i+ ":" +j;
                     td.className = "backgroundHor";
-                    td.setAttribute("onclick", "backgroundHor(event)");
+                    td.setAttribute("onmousedown", "backgroundHor(event)");
                     td.setAttribute("id", cellId);
                 }
                 tr.appendChild(td);
