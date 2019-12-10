@@ -30,13 +30,48 @@ sliderWidth.oninput = function() {
     background(backgroundWidth);
 }
 
+let crossStitchPanelToggleButton = document.querySelector('.crossStitchPanelToggleButton');
+let crossStitchPanelToggleButtonCross = document.querySelector('.crossStitchPanelToggleButton p');
 
+let crossStitchPanel = document.querySelector('.crossStitchPanel');
+let crossStitchColorPicker = document.querySelector('.crossStitchColorPicker');
+let sliderHeightBox = document.querySelector('.sliderHeightBox');
+let sliderWidthBox = document.querySelector('.sliderWidthBox');
+
+
+crossStitchPanelToggleButton.addEventListener("click", function() {
+    if(crossStitchColorPicker.style.display == "none"){
+        crossStitchPanelToggleButtonCross.style.transform = "rotate(45deg)";
+        crossStitchPanel.style.height = "14rem";
+        crossStitchPanel.style.borderTopLeftRadius = "2rem";
+        crossStitchPanel.style.borderTopRightRadius = "2rem";
+        crossStitchPanelToggleButton.style.bottom = "13.7rem";
+        setTimeout(function(){ 
+            crossStitchPanel.style.padding = "1rem";
+            crossStitchColorPicker.style.display = "block";
+            sliderHeightBox.style.display = "block";
+            sliderWidthBox.style.display = "block";
+         }, 50);
+
+    } else {
+        crossStitchPanelToggleButtonCross.style.transform = "rotate(0deg)";
+        crossStitchPanel.style.height = "0.5rem";
+        crossStitchPanel.style.borderTopLeftRadius = "1rem";
+        crossStitchPanel.style.borderTopRightRadius = "1rem";
+        crossStitchPanelToggleButton.style.bottom = "0rem";
+        setTimeout(function(){ 
+            crossStitchPanel.style.padding = "0";
+            crossStitchColorPicker.style.display = "none";
+            sliderHeightBox.style.display = "none";
+            sliderWidthBox.style.display = "none";
+         }, 50);
+    }
+});
 
 
 function background(){
     let table = document.createElement("table");
-    table.setAttribute("id", "crossStitchTable")
-
+    table.setAttribute("id", "crossStitchTable");
         for (let i = 1; i < backgroundHeight; i++) {
             let tr = document.createElement('tr');
             for (let j = 1; j < backgroundWidth; j++) {
@@ -77,7 +112,7 @@ function backgroundVer(event){
     } else if (document.querySelector('.crossStitchColorBlue:checked')) {
         document.getElementById(event.target.id).style.backgroundImage = "url('./images/backgroundVerBlue.jpg')";
     } else if (document.querySelector('.crossStitchColorDaPurple:checked')) {
-        document.getElementById(event.target.id).style.backgroundImage = "url('./images/backgroundVerGreen.jpg')";
+        document.getElementById(event.target.id).style.backgroundImage = "url('./images/backgroundVarDaPurple.jpg')";
     } else if (document.querySelector('.crossStitchColorWhite:checked')) {
         document.getElementById(event.target.id).style.backgroundImage = "url('./images/backgroundVerWhite.jpg')";
     } else if (document.querySelector('.crossStitchColorLiGrey:checked')) {
@@ -115,7 +150,7 @@ function backgroundHor(event){
     } else if (document.querySelector('.crossStitchColorBlue:checked')) {
         document.getElementById(event.target.id).style.backgroundImage = "url('./images/backgroundHorBlue.jpg')";
     } else if (document.querySelector('.crossStitchColorDaPurple:checked')) {
-        document.getElementById(event.target.id).style.backgroundImage = "url('./images/backgroundHorGreen.jpg')";
+        document.getElementById(event.target.id).style.backgroundImage = "url('./images/backgroundHorDaPurple.jpg')";
     } else if (document.querySelector('.crossStitchColorWhite:checked')) {
         document.getElementById(event.target.id).style.backgroundImage = "url('./images/backgroundHorWhite.jpg')";
     } else if (document.querySelector('.crossStitchColorLiGrey:checked')) {
