@@ -10,8 +10,6 @@ let sliderWidthOutput = document.getElementById("sliderWidthOutput");
 let backgroundHeight = 20;
 let backgroundWidth = 20;
 
-sliderHeightOutput.innerHTML = sliderHeight.value;
-sliderWidthOutput.innerHTML = sliderWidth.value;
 
 
 
@@ -73,12 +71,27 @@ crossStitchPanelToggleButton.addEventListener("click", function() {
 
 function background(){
     let table = document.createElement("table");
+
     let backgroundWidthTest = window.innerWidth;
     backgroundWidthTest = ~~(backgroundWidthTest/16);
-    console.log(backgroundWidthTest);
 
+    let backgroundHeightTest = window.innerHeight;
+    backgroundHeightTest = ~~(backgroundHeightTest/16);
+
+    let sliderHeight = document.getElementById('sliderHeight');
+    let sliderWidth = document.getElementById('sliderWidth');
+
+    sliderWidth.max = backgroundWidthTest;
+    sliderWidth.value = backgroundWidthTest;
+
+    sliderHeight.max = backgroundHeightTest;
+    sliderHeight.value = backgroundHeightTest;
+
+    sliderHeightOutput.innerHTML = backgroundHeightTest;
+    sliderWidthOutput.innerHTML = backgroundWidthTest
+,
     table.setAttribute("id", "crossStitchTable");
-        for (let i = 1; i < backgroundHeight; i++) {
+        for (let i = 1; i < backgroundHeightTest; i++) {
             let tr = document.createElement('tr');
             for (let j = 1; j < backgroundWidthTest; j++) {
                 let td = document.createElement('td');
